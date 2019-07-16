@@ -1,5 +1,7 @@
+/* 
 
-import * as actions from './action'
+import * as actions from './action';
+
 export const init={
     pre:'0',
     cur:'0',
@@ -7,7 +9,8 @@ export const init={
     operator:false,
     expression:''
 };
-function index(state=init,action){
+export default function index(state=init,action){
+    //规则
    switch(action.type){
         case actions.action0.type:
         case actions.action1.type:
@@ -21,17 +24,16 @@ function index(state=init,action){
         case actions.action9.type:
         {
             if(state.cur==='0'||state.operator===true){
+                console.log(state.cur)
                 state.operator=false;
                 state.expression+=action.data;
                 state.pre=state.result;
                 state.result=action.data;
-                console.log('result',state.result);
                 state.cur=state.result;
             }else{
-                
+                console.log(state.cur)
                 state.expression+=action.data;
                 state.result=state.cur+action.data;
-                console.log('result',state.result);
                 state.cur=state.result;
             }
             return Object.assign({},state);
@@ -39,5 +41,4 @@ function index(state=init,action){
         default :
             return state;
    }
-};
-export default index;
+}; */

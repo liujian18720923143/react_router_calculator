@@ -17,6 +17,7 @@ class Demo extends React.Component {
     }
 
     render() {
+        console.log("router-this-props",this.props);
         const { actions, counter } = this.props;
         const plan = counter > 0 ? (<p>{`叫你点你还真点啊！${counter}`}</p>) : '';
         return (
