@@ -18,10 +18,13 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
     }
-
+    /* componentWillReceiveProps(nextprops,nextstate){
+        console.log('nextprops',nextprops);
+        
+    } */
     render() {
         //const { actions } = this.props; 
-        console.log('父组件',this.props);
+        // console.log('父组件',this.props);
         /* let list=[['(',')','mc','m+','m-','mr','AC','+/-','%','÷',],['2nd','x2','x3','xy','ex','10x',7,8,9,'*'],[]] */
         //计算器的键码
         let list=[['AC','+/-','%','÷'],[7,8,9,'*'],[4,5,6,'-'],[1,2,3,'+'],[0,'.','=']]
@@ -39,8 +42,7 @@ class Demo extends React.Component {
 } 
 export default connect(
     state => {
-        console.log('state',state.Demo)
         return state.Demo
     },
-    dispatch => ({ actions: bindActionCreators(actions, dispatch) }),
+    dispatch => {console.log(1); return { actions: bindActionCreators(actions, dispatch) }},
 )(Demo);
