@@ -1,51 +1,39 @@
 
 import * as actions from './action'
 export const init={
-    cur:'0',
-    result:'',
-    operands1:'',
-    operands2:'',
-    operator:false,
-    operators:'',
-    expression:'',
-    ac:true
+    cur:0,
 };
-/* function index(state=init,action){
-    console.log('reducer',state)
-   if(Boolean(action.type)==true){
-    console.log('action.type',action.type)
-            state=action.data
-            return Object.assign({},{...state});
-    }
-    return state;
-}; */
+/**
+    @author 刘健
+    这是一个修改state的函数
+* */
 function index(state=init,action){
    switch(action.type){
-        case actions.action0.type:
-        case actions.action1.type:
-        case actions.action2.type:
-        case actions.action3.type:
-        case actions.action4.type:
-        case actions.action5.type:
-        case actions.action6.type:
-        case actions.action7.type:
-        case actions.action8.type:
-        case actions.action9.type:
-        case actions.action10.type:
-        case actions.action11.type:
-        case actions.action12.type:
-        case actions.action13.type:
-        case actions.action14.type:
-        case actions.action15.type:
-        case actions.action16.type:
-        case actions.action17.type:
-        case actions.action18.type:
-        case actions.action19.type:
-        case actions.action20.type:
-        case actions.action21.type:
-        case actions.action22.type:
-        case actions.action23.type:
-        case actions.action24.type:
+        case actions.clickEvent[0] :
+        case actions.clickEvent[1] :
+        case actions.clickEvent[2] :
+        case actions.clickEvent[3] :
+        case actions.clickEvent[4] :
+        case actions.clickEvent[5] :
+        case actions.clickEvent[6] :
+        case actions.clickEvent[7] :
+        case actions.clickEvent[8] :
+        case actions.clickEvent[9] :
+        case actions.clickEvent[10] :
+        case actions.clickEvent[11] :
+        case actions.clickEvent[12] :
+        case actions.clickEvent[13] :
+        case actions.clickEvent[14] :
+        case actions.clickEvent[15] :
+        case actions.clickEvent[16] :
+        case actions.clickEvent[17] :
+        case actions.clickEvent[18] :
+        case actions.clickEvent[19] :
+        case actions.clickEvent[20] :
+        case actions.clickEvent[21] :
+        case actions.clickEvent[22] :
+        case actions.clickEvent[23] :
+        case actions.clickEvent[24] :
         {
             console.log(action.type);
             state=action.data

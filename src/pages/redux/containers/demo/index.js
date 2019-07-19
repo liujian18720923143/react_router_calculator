@@ -11,23 +11,13 @@ import Functional from './component/Functional/Functional';
 import * as actions from './component/Digital/action';
 
 /**
-    @author Mothpro
-    这是一个演示的Demo组件，用于演示redux的使用
+    @author 刘健
+    这是一个演示的calculator组件
 * */
-class Demo extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    /* componentWillReceiveProps(nextprops,nextstate){
-        console.log('nextprops',nextprops);
-        
-    } */
+class Calculator extends React.Component {
     render() {
-        //const { actions } = this.props; 
-        // console.log('父组件',this.props);
-        /* let list=[['(',')','mc','m+','m-','mr','AC','+/-','%','÷',],['2nd','x2','x3','xy','ex','10x',7,8,9,'*'],[]] */
         //计算器的键码
-        let list=[['AC','+/-','%','÷'],[7,8,9,'*'],[4,5,6,'-'],[1,2,3,'+'],[0,'.','=']]
+        let list=[['AC','+/-','%','÷'],[7,8,9,'*'],[4,5,6,'-'],[1,2,3,'+'],[0,'.','=']];
         //显示计算机
         return (
             <div className='redux-demo'>
@@ -42,7 +32,7 @@ class Demo extends React.Component {
 } 
 export default connect(
     state => {
-        return state.Demo
+        return state.Calculator
     },
     dispatch => {console.log(1); return { actions: bindActionCreators(actions, dispatch) }},
-)(Demo);
+)(Calculator);

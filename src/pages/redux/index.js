@@ -7,7 +7,7 @@ import App from 'components/app/index';
 import createStoreWithMdware from './store/index';
 import reducers from './reducers/index';
 
-import Demo from './containers/demo/index';
+import Calculator from './containers/demo/index';
 
 
 /**
@@ -18,7 +18,7 @@ const store = createStoreWithMdware(reducers);
 ReactDom.render(
     <Provider store={store}>
         <App>
-            <Demo />
+            <Calculator />
         </App>
     </Provider>,
     document.getElementById('container'),
